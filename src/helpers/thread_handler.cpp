@@ -32,6 +32,7 @@ queue<string> work;
 FILE* fp;
 struct timeval start_time;
 bool work_done = false;
+bool consumers_done = false;
 
 
 void thread_handler(int num_threads, int id) {
@@ -56,11 +57,15 @@ void thread_handler(int num_threads, int id) {
 		perror("Error creating thread");
 	}
 
-	pthread_join(ptid, NULL);
+	
 
 	for(int i=0; i < num_threads; i++) {
 		pthread_join(ntid[i], NULL);
 	}
+	cout << "Consumers Done" << endl;
+	consumers_done = true;
+
+	pthread_join(ptid, NULL);
 	write_footer();
 	fclose(fp);
 }
@@ -89,14 +94,17 @@ void *consumer(void *arg) {
 		if(work_done && work.size() == 0) break;
 		
 		cout << "Thread " << *(int *) arg << ": Before getting work" << endl;
-		cout << "Thread " << *(int *) arg << ": Queue size 2 is " << (int)work.size() << endl;
+		// cout << "Thread " << *(int *) arg << ": Queue size 2 is " << (int)work.size() << endl;
 		pthread_mutex_lock(&work_mutex);
+		cout << "Thread " << *(int *) arg << ": After work mutex"<< endl;
 		string command = "";
-		if(work.size() != 0) {
+		if(work.size() > 0) {
 			cout << "Thread " << *(int *) arg << ": Popping work" << endl;
 			command = work.front();
 			work.pop();
 		} else {
+			cout << "Continuing" << endl;
+			pthread_mutex_unlock(&work_mutex);
 			continue;
 		}
 		
@@ -128,14 +136,16 @@ void *producer(void *arg) {
 	while(!cin.eof()) {
 		cout << "Producer: waiting for input" << endl;
 		cin >> command;
+		cin.sync();
+		cout << "Producer Recieved: " << command << endl;
 		if(command[0] == 'T') {
 			if((int)work.size() <= stats.num_threads*2) {
-				pthread_mutex_lock(&work_mutex);
+				// pthread_mutex_lock(&work_mutex);
 				work.push(command);
-				pthread_mutex_unlock(&work_mutex);
+				// pthread_mutex_unlock(&work_mutex);
 				file_write("Work", command[1], 0);
 				pthread_cond_signal(&queue_contains);
-				pthread_mutex_unlock(&file_mutex);
+				pthread_mutex_unlock(&wait_mutex);
 				cout << "Producer: Adding work " << stats.work << endl;
 			} else {
 				cout << "Producer: Queue is full" << endl;
@@ -153,11 +163,12 @@ void *producer(void *arg) {
 	work_done = true;
 	cout << "Producer is done" << endl;
 	file_write("End", ' ', 0);
-	// pthread_cond_broadcast(&queue_contains);
+	pthread_cond_broadcast(&queue_contains);
 	// pthread_exit(NULL);
-	// while(work.size() != 0) {
-	// 	pthread_cond_signal(&queue_contains);
-	// 	pthread_mutex_unlock(&file_mutex);
+	// while(!consumers_done) {
+	// 	cout << "Producer Signalling" << endl;
+	// 	pthread_cond_broadcast(&queue_contains);
+	// 	pthread_mutex_unlock(&wait_mutex);
 	// }
 	return (void *) NULL;
 
