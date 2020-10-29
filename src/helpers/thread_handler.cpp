@@ -169,8 +169,12 @@ void *producer(void *arg) {
 
 	// Loop until end of file
 	while(!cin.eof()) {
+
 		cin >> command;
 
+		// Break if EOF. Prevents previous input or CTRL D being passed to
+		// consumers
+		if (cin.eof()) break;
 		// Check what kind of command was inputted
 		if(command[0] == 'T') {
 			// Check if queue is full

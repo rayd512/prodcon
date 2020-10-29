@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-Wall -O2 -std=c++11 -g
+CFLAGS=-Wall -O2 -std=c++11
 LDFLAGS=-lpthread
 OBJECTS=main.o tands.o thread_handler.o
 DIR1=src/helpers/
