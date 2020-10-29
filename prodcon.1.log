@@ -1,124 +1,120 @@
-    0.000 ID=1      Ask
-    0.001 ID=2      Ask
-    0.001 ID=3      Ask
-    0.001 ID=0 Q= 1 Work       4
-    0.001 ID=0 Q= 2 Work       2
-    0.001 ID=0 Q= 3 Work       1
-    0.001 ID=0 Q= 4 Work       1
-    0.001 ID=1 Q= 3 Recieve    4
-    0.001 ID=3 Q= 2 Recieve    2
-    0.001 ID=2 Q= 2 Recieve    1
-    0.001 ID=0 Q= 2 Work       5
-    0.001 ID=0 Q= 3 Work       5
-    0.001 ID=0 Q= 4 Work       5
-    0.001 ID=0 Q= 5 Work       5
-    0.001 ID=0 Q= 6 Work       5
-    0.003 ID=6      Complete   1
-    0.003 ID=2      Ask
-    0.003 ID=2 Q= 5 Recieve    1
-    0.003 ID=0 Q= 6 Work       5
-    0.005 ID=6      Complete   2
-    0.005 ID=3      Ask
-    0.005 ID=3 Q= 5 Recieve    5
-    0.005 ID=6      Complete   1
-    0.005 ID=2      Ask
-    0.005 ID=0 Q= 6 Work       5
-    0.005 ID=2 Q= 5 Recieve    5
-    0.005 ID=0 Q= 6 Work       5
-    0.006 ID=6      Complete   4
-    0.006 ID=1      Ask
-    0.006 ID=1 Q= 5 Recieve    5
-    0.006 ID=0 Q= 6 Work       5
-    0.010 ID=6      Complete   5
-    0.010 ID=1      Ask
-    0.010 ID=1 Q= 5 Recieve    5
-    0.010 ID=0 Q= 6 Work       5
-    0.011 ID=6      Complete   5
-    0.011 ID=3      Ask
-    0.011 ID=3 Q= 5 Recieve    5
-    0.011 ID=5      Complete   5
-    0.011 ID=2      Ask
-    0.011 ID=0 Q= 6 Work       5
-    0.011 ID=2 Q= 5 Recieve    5
-    0.011 ID=0 Q= 6 Work       5
-    0.015 ID=6      Complete   5
-    0.015 ID=1      Ask
-    0.015 ID=1 Q= 5 Recieve    5
-    0.015 ID=0 Q= 6 Work       5
-    0.017 ID=6      Complete   5
-    0.017 ID=3      Ask
-    0.017 ID=3 Q= 5 Recieve    5
-    0.017 ID=0 Q= 6 Work       5
-    0.017 ID=6      Complete   5
-    0.017 ID=2      Ask
-    0.017 ID=2 Q= 5 Recieve    5
-    0.018 ID=5      Complete   5
-    0.018 ID=1      Ask
-    0.018 ID=1 Q= 4 Recieve    5
-    0.018 ID=0 Q= 5 Work       5
-    0.018 ID=0 Q= 6 Work       5
-    0.022 ID=6      Complete   5
-    0.022 ID=3      Ask
-    0.022 ID=3 Q= 5 Recieve    5
-    0.022 ID=0 Q= 6 Work       5
-    0.022 ID=6      Complete   5
-    0.022 ID=2      Ask
-    0.022 ID=2 Q= 5 Recieve    5
-    0.022 ID=0 Q= 6 Work       5
-    0.022 ID=6      Complete   5
-    0.022 ID=1      Ask
-    0.022 ID=1 Q= 5 Recieve    5
-    0.022 ID=0 Q= 6 Work       5
-    0.026 ID=6      Complete   5
-    0.026 ID=1      Ask
-    0.026 ID=1 Q= 5 Recieve    5
-    0.026 ID=5      Sleep      9
-    0.027 ID=5      Complete   5
-    0.027 ID=3      Ask
-    0.027 ID=3 Q= 4 Recieve    5
-    0.027 ID=4      Complete   5
-    0.027 ID=2      Ask
-    0.027 ID=2 Q= 3 Recieve    5
-    0.029 ID=3      Complete   5
-    0.029 ID=1      Ask
-    0.029 ID=1 Q= 2 Recieve    5
-    0.032 ID=2      Complete   5
-    0.032 ID=3      Ask
-    0.032 ID=3 Q= 1 Recieve    5
-    0.032 ID=1      Complete   5
-    0.032 ID=2      Ask
-    0.032 ID=2 Q= 0 Recieve    5
-    0.033 ID=0      Complete   5
-    0.033 ID=1      Ask
-    0.037 ID=0      Complete   5
-    0.037 ID=3      Ask
-    0.037 ID=0      Complete   5
-    0.037 ID=2      Ask
-    0.116 ID=0 Q= 1 Work       5
-    0.116 ID=1      Sleep      1
-    0.116 ID=1 Q= 0 Recieve    5
-    0.119 ID=0      Complete   5
-    0.119 ID=1      Ask
-    0.126 ID=0 Q= 1 Work       1
-    0.126 ID=0 Q= 2 Work       1
-    0.126 ID=0 Q= 3 Work       1
-    0.126 ID=0      End 
-    0.126 ID=2 Q= 1 Recieve    1
-    0.126 ID=1 Q= 0 Recieve    1
-    0.126 ID=3 Q= 0 Recieve    1
-    0.127 ID=0      Complete   1
-    0.127 ID=1      Ask
-    0.127 ID=0      Complete   1
-    0.127 ID=2      Ask
-    0.127 ID=0      Complete   1
-    0.127 ID=3      Ask
+    0.000    ID=2      Ask
+    0.000    ID=2 Q= 0 Recieve    4
+    0.000    ID=1      Ask
+    0.000    ID=0 Q= 0 Work       4
+    0.000    ID=0 Q= 1 Work       2
+    0.000    ID=0 Q= 1 Work       1
+    0.000    ID=0 Q= 2 Work       1
+    0.000    ID=3      Ask
+    0.000    ID=3 Q= 2 Recieve    1
+    0.000    ID=1 Q= 2 Recieve    2
+    0.000    ID=0 Q= 2 Work       5
+    0.000    ID=0 Q= 3 Work       5
+    0.000    ID=0 Q= 4 Work       5
+    0.000    ID=0 Q= 5 Work       5
+    0.000    ID=0 Q= 6 Work       5
+    0.001    ID=6      Complete   1
+    0.001    ID=3      Ask
+    0.001    ID=3 Q= 5 Recieve    1
+    0.001    ID=0 Q= 6 Work       5
+    0.002    ID=6      Complete   1
+    0.002    ID=6      Complete   2
+    0.002    ID=1      Ask
+    0.002    ID=3      Ask
+    0.002    ID=3 Q= 4 Recieve    5
+    0.002    ID=1 Q= 4 Recieve    5
+    0.004    ID=4      Complete   4
+    0.004    ID=2      Ask
+    0.004    ID=2 Q= 3 Recieve    5
+    0.004    ID=0 Q= 4 Work       5
+    0.004    ID=0 Q= 5 Work       5
+    0.004    ID=0 Q= 6 Work       5
+    0.006    ID=6      Complete   5
+    0.006    ID=3      Ask
+    0.006    ID=3 Q= 5 Recieve    5
+    0.006    ID=0 Q= 6 Work       5
+    0.006    ID=6      Complete   5
+    0.006    ID=1      Ask
+    0.006    ID=1 Q= 5 Recieve    5
+    0.008    ID=5      Complete   5
+    0.008    ID=2      Ask
+    0.008    ID=2 Q= 4 Recieve    5
+    0.008    ID=0 Q= 5 Work       5
+    0.008    ID=0 Q= 6 Work       5
+    0.010    ID=6      Complete   5
+    0.010    ID=1      Ask
+    0.010    ID=1 Q= 5 Recieve    5
+    0.010    ID=0 Q= 6 Work       5
+    0.010    ID=6      Complete   5
+    0.010    ID=3      Ask
+    0.010    ID=3 Q= 5 Recieve    5
+    0.010    ID=0 Q= 6 Work       5
+    0.011    ID=6      Complete   5
+    0.011    ID=2      Ask
+    0.011    ID=2 Q= 5 Recieve    5
+    0.011    ID=0 Q= 6 Work       5
+    0.013    ID=6      Complete   5
+    0.013    ID=3      Ask
+    0.013    ID=3 Q= 5 Recieve    5
+    0.013    ID=0 Q= 6 Work       5
+    0.014    ID=6      Complete   5
+    0.014    ID=1      Ask
+    0.014    ID=1 Q= 5 Recieve    5
+    0.014    ID=0 Q= 6 Work       5
+    0.015    ID=6      Complete   5
+    0.015    ID=2      Ask
+    0.015    ID=2 Q= 5 Recieve    5
+    0.015    ID=0 Q= 6 Work       5
+    0.017    ID=6      Complete   5
+    0.017    ID=3      Ask
+    0.017    ID=3 Q= 5 Recieve    5
+    0.017    ID=5      Sleep      9
+    0.019    ID=5      Complete   5
+    0.019    ID=2      Ask
+    0.019    ID=2 Q= 4 Recieve    5
+    0.019    ID=4      Complete   5
+    0.019    ID=1      Ask
+    0.019    ID=1 Q= 3 Recieve    5
+    0.021    ID=3      Complete   5
+    0.021    ID=3      Ask
+    0.021    ID=3 Q= 2 Recieve    5
+    0.022    ID=2      Complete   5
+    0.022    ID=2      Ask
+    0.022    ID=2 Q= 1 Recieve    5
+    0.023    ID=1      Complete   5
+    0.023    ID=1      Ask
+    0.023    ID=1 Q= 0 Recieve    5
+    0.024    ID=0      Complete   5
+    0.024    ID=3      Ask
+    0.026    ID=0      Complete   5
+    0.026    ID=2      Ask
+    0.027    ID=0      Complete   5
+    0.027    ID=1      Ask
+    0.107    ID=0 Q= 1 Work       5
+    0.107    ID=1      Sleep      1
+    0.107    ID=3 Q= 0 Recieve    5
+    0.111    ID=0      Complete   5
+    0.111    ID=3      Ask
+    0.117    ID=0 Q= 1 Work       1
+    0.117    ID=0 Q= 2 Work       1
+    0.117    ID=1 Q= 2 Recieve    1
+    0.117    ID=0 Q= 2 Work       1
+    0.117    ID=0      End 
+    0.117    ID=3 Q= 0 Recieve    1
+    0.117    ID=2 Q= 0 Recieve    1
+    0.118    ID=0      Complete   1
+    0.118    ID=1      Ask
+    0.118    ID=0      Complete   1
+    0.118    ID=3      Ask
+    0.118    ID=0      Complete   1
+    0.118    ID=2      Ask
 Summary:
-     Work       27   
-     Ask        30   
-     Recieve    27   
-     Complete   27   
+     Work       26   
+     Ask        29   
+     Recieve    26   
+     Complete   26   
      Sleep      2    
-     Thread 1   10   
-     Thread 2   9    
-     Thread 3   8    
-Transactions per second: 212.69
+     Thread 1   8    
+     Thread 2   8    
+     Thread 3   10   
+Transactions per second: 220.07
