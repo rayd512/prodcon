@@ -32,7 +32,7 @@ queue<string> work;
 FILE* fp;
 struct timeval start_time;
 bool work_done = false;
-bool consumers_done = false;
+// bool consumers_done = false;
 
 
 void thread_handler(int num_threads, int id) {
@@ -44,6 +44,10 @@ void thread_handler(int num_threads, int id) {
 
 	string log_file_name = "prodcon." + to_string(id) + ".log";
 	fp = fopen(log_file_name.c_str(), "w+");
+
+	if (fp == NULL) {
+		perror("Error opening file");
+	}
 
 	for (int i=0; i<num_threads; i++) {
 		int *arg = (int *) malloc(sizeof(int));
@@ -58,12 +62,11 @@ void thread_handler(int num_threads, int id) {
 	}
 
 	
-
 	for(int i=0; i < num_threads; i++) {
 		pthread_join(ntid[i], NULL);
 	}
-	cout << "Consumers Done" << endl;
-	consumers_done = true;
+	// // cout << "Consumers Done" << endl;
+	// consumers_done = true;
 
 	pthread_join(ptid, NULL);
 	write_footer();
@@ -75,7 +78,7 @@ void *consumer(void *arg) {
 		
 		// fprintf(fp, "%.3f ID=%d      Ask\n", time_now(), *(int *) arg);
 		file_write("Ask", ' ', *(int *) arg);
-		cout << "Thread " << *(int *) arg << ": asking for work" << endl;
+		// cout << "Thread " << *(int *) arg << ": asking for work" << endl;
 		// pthread_mutex_lock(&work_mutex);
 		if(work_done && work.size() == 0) break;
 		// pthread_mutex_unlock(&work_mutex);
@@ -85,7 +88,7 @@ void *consumer(void *arg) {
 		// pthread_mutex_lock(&work_mutex);
 		if (work.size() == 0) {
 			pthread_mutex_lock(&wait_mutex);
-			cout << "Thread " << *(int *) arg << ": Stuck waiting" << endl;
+			// cout << "Thread " << *(int *) arg << ": Stuck waiting" << endl;
 			pthread_cond_wait(&queue_contains, &wait_mutex);
 			pthread_mutex_unlock(&wait_mutex);
 		}
@@ -93,25 +96,25 @@ void *consumer(void *arg) {
 
 		if(work_done && work.size() == 0) break;
 		
-		cout << "Thread " << *(int *) arg << ": Before getting work" << endl;
-		// cout << "Thread " << *(int *) arg << ": Queue size 2 is " << (int)work.size() << endl;
+		// cout << "Thread " << *(int *) arg << ": Before getting work" << endl;
+		// // cout << "Thread " << *(int *) arg << ": Queue size 2 is " << (int)work.size() << endl;
 		pthread_mutex_lock(&work_mutex);
-		cout << "Thread " << *(int *) arg << ": After work mutex"<< endl;
+		// cout << "Thread " << *(int *) arg << ": After work mutex"<< endl;
 		string command = "";
 		if(work.size() > 0) {
-			cout << "Thread " << *(int *) arg << ": Popping work" << endl;
+			// cout << "Thread " << *(int *) arg << ": Popping work" << endl;
 			command = work.front();
 			work.pop();
 		} else {
-			cout << "Continuing" << endl;
+			// cout << "Continuing" << endl;
 			pthread_mutex_unlock(&work_mutex);
 			continue;
 		}
 		
-		cout << "Thread " << *(int *) arg << ": After getting work" << endl;
+		// cout << "Thread " << *(int *) arg << ": After getting work" << endl;
 		pthread_mutex_unlock(&work_mutex);
 		
-		cout << "Thread " << *(int *) arg << ": got work" << endl;
+		// cout << "Thread " << *(int *) arg << ": got work" << endl;
 		
 		file_write("Recieve", command[1], *(int *) arg);
 		
@@ -120,10 +123,10 @@ void *consumer(void *arg) {
 		pthread_cond_signal(&queue_full);
 		pthread_mutex_unlock(&queue_mutex);
 		stats.threads[*(int *) arg-1].second++;
-		cout << "Thread " << *(int *) arg << ": done work" << endl;
+		// cout << "Thread " << *(int *) arg << ": done work" << endl;
 
 	}
-	cout << "Thread " << *(int *) arg << " done done" << endl;
+	// cout << "Thread " << *(int *) arg << " done done" << endl;
 	free(arg);
 	
 	// pthread_exit(NULL);
@@ -134,19 +137,19 @@ void *producer(void *arg) {
 
 	string command;
 	while(!cin.eof()) {
-		cout << "Producer: waiting for input" << endl;
+		// cout << "Producer: waiting for input" << endl;
 		cin >> command;
 		cin.sync();
-		cout << "Producer Recieved: " << command << endl;
+		// cout << "Producer Recieved: " << command << endl;
 		if(command[0] == 'T') {
-			if((int)work.size() <= stats.num_threads*2) {
-				// pthread_mutex_lock(&work_mutex);
+			if((int)work.size() < stats.num_threads*2) {
+				pthread_mutex_lock(&work_mutex);
 				work.push(command);
-				// pthread_mutex_unlock(&work_mutex);
+				pthread_mutex_unlock(&work_mutex);
 				file_write("Work", command[1], 0);
 				pthread_cond_signal(&queue_contains);
 				pthread_mutex_unlock(&wait_mutex);
-				cout << "Producer: Adding work " << stats.work << endl;
+				// cout << "Producer: Adding work " << stats.work << endl;
 			} else {
 				cout << "Producer: Queue is full" << endl;
 				pthread_mutex_lock(&queue_mutex);
@@ -155,18 +158,18 @@ void *producer(void *arg) {
 			}
 		} else {
 			file_write("Sleep", command[1], 0);
-			// cout << command[1]-'0' << endl;
-			cout << "Producer: Sleeping" << endl;
+			// // cout << command[1]-'0' << endl;
+			// cout << "Producer: Sleeping" << endl;
 			Sleep(command[1]-'0');
 		}
 	}
 	work_done = true;
-	cout << "Producer is done" << endl;
+	// cout << "Producer is done" << endl;
 	file_write("End", ' ', 0);
 	pthread_cond_broadcast(&queue_contains);
 	// pthread_exit(NULL);
 	// while(!consumers_done) {
-	// 	cout << "Producer Signalling" << endl;
+	// 	// cout << "Producer Signalling" << endl;
 	// 	pthread_cond_broadcast(&queue_contains);
 	// 	pthread_mutex_unlock(&wait_mutex);
 	// }
@@ -209,7 +212,7 @@ void file_write(string command, char n, int id) {
 double time_now() {
 	struct timeval now;
 	gettimeofday(&now, NULL);
-	// cout << (double) (now.tv_usec - start_time.tv_usec) / 1000000 + (double)(now.tv_sec - start_time.tv_sec) << endl;
+	// // cout << (double) (now.tv_usec - start_time.tv_usec) / 1000000 + (double)(now.tv_sec - start_time.tv_sec) << endl;
 	return (double) (now.tv_sec - start_time.tv_sec) +
 		   (double) (now.tv_usec - start_time.tv_usec) / 1000000;
 }
@@ -233,7 +236,7 @@ void write_footer() {
 	fprintf(fp, "     %-10s %-5d\n", "Sleep", stats.sleep);
 	for(int i = 0; i < (int)stats.threads.size(); i++) {
 		string thread_name = "Thread " + to_string(i+1);
-		// cout << thread_name << endl;
+		// // cout << thread_name << endl;
 		fprintf(fp, "     %-10s %-5d\n", thread_name.c_str(), stats.threads[i].second);
 	}
 
