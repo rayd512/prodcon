@@ -172,9 +172,10 @@ void *producer(void *arg) {
 
 		cin >> command;
 
-		// Break if EOF. Prevents previous input or CTRL D being passed to
-		// consumers
-		if (cin.eof()) break;
+		// Break if there was no input
+		if (command == "") break;
+
+		cout << "Sending: " << command << endl;
 		// Check what kind of command was inputted
 		if(command[0] == 'T') {
 			// Check if queue is full
@@ -197,12 +198,25 @@ void *producer(void *arg) {
 				pthread_mutex_lock(&queue_mutex);
 				pthread_cond_wait(&queue_full, &queue_mutex);
 				pthread_mutex_unlock(&queue_mutex);
+
+				pthread_mutex_lock(&work_mutex);
+				work.push(command);
+				pthread_mutex_unlock(&work_mutex);
+
+				file_write("Work", command[1], 0);
+
+				// Signal to any waiting threads, items have been
+				// added to queue
+				pthread_cond_signal(&queue_contains);
+				pthread_mutex_unlock(&wait_mutex);
 			}
 		} else {
 			// Write to log and sleep
 			file_write("Sleep", command[1], 0);
 			Sleep(command[1]-'0');
 		}
+
+		command = "";
 	}
 
 	// Set work done to true to inform consumers

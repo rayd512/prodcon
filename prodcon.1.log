@@ -1,14 +1,18 @@
     0.000    ID=1      Ask
     0.000    ID=2      Ask
     0.000    ID=3      Ask
-    0.753    ID=0      End 
+    1.299    ID=0 Q= 1 Work       8
+    1.299    ID=1 Q= 0 Recieve    8
+    1.311    ID=0      Complete   8
+    1.311    ID=1      Ask
+    2.758    ID=0      End 
 Summary:
-     Work       0    
-     Ask        3    
-     Recieve    0    
-     Complete   0    
+     Work       1    
+     Ask        4    
+     Recieve    1    
+     Complete   1    
      Sleep      0    
-     Thread 1   0    
+     Thread 1   1    
      Thread 2   0    
      Thread 3   0    
-Transactions per second: 0.00
+Transactions per second: 0.36
