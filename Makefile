@@ -6,6 +6,11 @@ DIR1=src/helpers/
 INC=$(DIR1)
 INC_PARAMS=$(foreach d, $(INC), -I$d)
 
+all: prodcon
+
+debug: CFLAGS += -g
+debug: prodcon 
+
 prodcon: $(OBJECTS)
 	$(CC) -o prodcon $(OBJECTS) $(LDFLAGS)
 

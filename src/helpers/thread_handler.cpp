@@ -9,9 +9,12 @@ void file_write(string command, char n, int id);
 void write_footer();
 void init_stats(int num_threads);
 double time_now();
+void Trans( int n );
+void Sleep( int n );
 
 // Declare mutex's for threads
 pthread_mutex_t file_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t thread_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t wait_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t work_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t queue_mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -37,6 +40,7 @@ queue<string> work;
 FILE* fp;
 struct timeval start_time;
 bool work_done = false;
+int threads_running = 0;
 
 /** Spawns threads and setups program
  *
@@ -49,6 +53,9 @@ bool work_done = false;
 void thread_handler(int num_threads, int id) {
 	pthread_t ntid[num_threads];
 	pthread_t ptid;
+
+	// Used to end all thread when work is done
+	threads_running = num_threads;
 
 	// Get globals ready for processing
 	init_stats(num_threads);
@@ -102,7 +109,6 @@ void *consumer(void *arg) {
 
 		// write to file that thread is asking for work
 		file_write("Ask", ' ', *(int *) arg);
-
 		// Check if there is no more work to be done
 		if(work_done && work.size() == 0) break;
 
@@ -118,6 +124,7 @@ void *consumer(void *arg) {
 		// Check if there is no more work to be done
 		if(work_done && work.size() == 0) break;
 		
+
 		// Lock mutex before getting work
 		pthread_mutex_lock(&work_mutex);
 		string command = "";
@@ -143,12 +150,15 @@ void *consumer(void *arg) {
 
 		// Signal to producer that a queue is not full anymore
 		pthread_cond_signal(&queue_full);
-		pthread_mutex_unlock(&queue_mutex);
 
 		// Increase the num of job counter for the thread
 		stats.threads[*(int *) arg-1].second++;
 
 	}
+	// Decrement thread running counter when thread exits
+	pthread_mutex_lock(&thread_mutex);
+	threads_running--;	
+	pthread_mutex_unlock(&thread_mutex);
 	// Free arg
 	free(arg);
 	return (void *) NULL;
@@ -175,7 +185,6 @@ void *producer(void *arg) {
 		// Break if there was no input
 		if (command == "") break;
 
-		cout << "Sending: " << command << endl;
 		// Check what kind of command was inputted
 		if(command[0] == 'T') {
 			// Check if queue is full
@@ -191,7 +200,6 @@ void *producer(void *arg) {
 				// Signal to any waiting threads, items have been
 				// added to queue
 				pthread_cond_signal(&queue_contains);
-				pthread_mutex_unlock(&wait_mutex);
 			
 			} else {
 				// Queue is full, wait until a thread finishes a job
@@ -222,7 +230,10 @@ void *producer(void *arg) {
 	// Set work done to true to inform consumers
 	work_done = true;
 	file_write("End", ' ', 0);
-	pthread_cond_broadcast(&queue_contains);
+	// Signal threads stuck waiting to exit
+	while(threads_running != 0) {
+		pthread_cond_signal(&queue_contains);
+	}
 	return (void *) NULL;
 
 }
