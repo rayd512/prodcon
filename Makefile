@@ -17,8 +17,8 @@ prodcon: $(OBJECTS)
 main.o: main.cpp thread_handler.o
 	$(CC) $(CFLAGS) -c main.cpp $(INC_PARAMS) -o main.o $(LDFLAGS)
 
-tands.o: $(DIR1)tands.cpp
-	$(CC) $(CFLAGS) -c $(DIR1)tands.cpp $(INC_PARAMS) -o tands.o $(LDFLAGS)
+tands.o: $(DIR1)tands.c
+	$(CC) $(CFLAGS) -c $(DIR1)tands.c $(INC_PARAMS) -o tands.o $(LDFLAGS)
 
 thread_handler.o: $(DIR1)thread_handler.cpp tands.o
 	$(CC) $(CFLAGS) -c $(DIR1)thread_handler.cpp $(INC_PARAMS) -o thread_handler.o $(LDFLAGS)
