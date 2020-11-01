@@ -253,12 +253,12 @@ void file_write(string command, char n, int id) {
 	// Write to the log and increase the counter depending on what action was 
 	// done
 	if(command == "End") {
-		fprintf(fp, "    %-8.3f ID=%d      %s \n",
+		fprintf(fp, "    %-5.3f ID=%d      %-10s \n",
 				time_now(), id, command.c_str());
 	
 	} else if (command == "Sleep" || command == "Complete") {
 		
-		fprintf(fp, "    %-8.3f ID=%d      %-10s %c\n",
+		fprintf(fp, "    %-5.3f ID=%d      %-10s %c\n",
 				time_now(), (int)work.size(), command.c_str(), n);
 		
 		if (command == "Sleep") stats.sleep++;
@@ -266,7 +266,7 @@ void file_write(string command, char n, int id) {
 
 	} else if (command == "Work" || command == "Recieve") {
 		
-		fprintf(fp, "    %-8.3f ID=%d Q= %d %-10s %c\n",
+		fprintf(fp, "    %-5.3f ID=%d Q= %d %-10s %c\n",
 				time_now(), id, (int)work.size(), command.c_str(), n);
 		
 		if (command == "Work") stats.work++;
@@ -274,7 +274,7 @@ void file_write(string command, char n, int id) {
 
 	} else if (command == "Ask") {
 		
-		fprintf(fp, "    %-8.3f ID=%d      Ask\n", time_now(), id);
+		fprintf(fp, "    %-5.3f ID=%d      Ask\n", time_now(), id);
 		stats.ask++;
 
 	}
