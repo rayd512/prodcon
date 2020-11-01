@@ -12,6 +12,11 @@ double time_now();
 void Trans( int n );
 void Sleep( int n );
 
+// pthread_mutex was used because after looking at man pages and the
+// assignment specifications, pthread seemed like the simplest and most
+// logical thing to use. I did not believe semaphore's were needed to
+// implement what was expected as I felt pthread_mutex gave me all the
+// functionality I needed.
 // Declare mutex's for threads
 pthread_mutex_t file_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t thread_mutex = PTHREAD_MUTEX_INITIALIZER;
