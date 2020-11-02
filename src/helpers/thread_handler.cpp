@@ -221,7 +221,6 @@ void *producer(void *arg) {
 				// Signal to any waiting threads, items have been
 				// added to queue
 				pthread_cond_signal(&queue_contains);
-				pthread_mutex_unlock(&wait_mutex);
 			}
 		} else {
 			// Write to log and sleep

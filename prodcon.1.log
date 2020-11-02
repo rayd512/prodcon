@@ -1,474 +1,133 @@
-    0.000 ID=1      Ask
-    0.000 ID=6      Ask
     0.000 ID=2      Ask
-    0.000 ID=8      Ask
     0.000 ID=4      Ask
-    0.000 ID=9      Ask
-    0.000 ID=5      Ask
+    0.000 ID=1      Ask
     0.000 ID=7      Ask
-    0.000 ID=0 Q= 1 Work       8
-    0.000 ID=0 Q= 2 Work       8
-    0.000 ID=0 Q= 3 Work       8
+    0.000 ID=6      Ask
     0.000 ID=3      Ask
-    0.000 ID=0 Q= 1 Work       8
-    0.000 ID=2 Q= 1 Recieve    8
-    0.000 ID=6 Q= 1 Recieve    8
-    0.000 ID=3 Q= 0 Recieve    8
-    0.000 ID=1 Q= 0 Recieve    8
-    0.000 ID=8 Q= 0 Recieve    8
-    0.000 ID=0 Q= 0 Work       8
-    0.000 ID=0 Q= 1 Work       8
-    0.000 ID=0 Q= 2 Work       8
-    0.000 ID=9 Q= 0 Recieve    8
+    0.000 ID=10      Ask
+    0.000 ID=5      Ask
+    0.000 ID=8      Ask
+    0.000 ID=9      Ask
+    0.000 ID=11      Ask
+    0.000 ID=12      Ask
+    0.000 ID=13      Ask
+    0.000 ID=14      Ask
+    0.000 ID=15      Ask
+    0.000 ID=17      Ask
+    0.000 ID=19      Ask
+    0.000 ID=18      Ask
+    0.000 ID=16      Ask
+    0.000 ID=20      Ask
     0.000 ID=0 Q= 1 Work       8
     0.000 ID=0 Q= 2 Work       8
     0.000 ID=0 Q= 3 Work       8
-    0.000 ID=5 Q= 1 Recieve    8
-    0.000 ID=7 Q= 1 Recieve    8
-    0.006 ID=4 Q= 1 Recieve    8
-    0.009 ID=2      Complete   8
-    0.009 ID=2      Ask
-    0.009 ID=2 Q= 0 Recieve    8
-    0.009 ID=1      Complete   8
-    0.009 ID=1      Ask
-    0.009 ID=8      Complete   8
-    0.009 ID=1 Q= 0 Recieve    8
-    0.009 ID=8      Ask
+    0.000 ID=0 Q= 4 Work       8
+    0.000 ID=4 Q= 3 Recieve    8
+    0.000 ID=7 Q= 3 Recieve    8
+    0.000 ID=0 Q= 2 Work       8
+    0.000 ID=2 Q= 2 Recieve    8
+    0.000 ID=1 Q= 1 Recieve    8
+    0.000 ID=0 Q= 1 Work       8
+    0.000 ID=6 Q= 1 Recieve    8
+    0.000 ID=0 Q= 2 Work       8
+    0.000 ID=3 Q= 1 Recieve    8
+    0.000 ID=10 Q= 1 Recieve    8
+    0.000 ID=0 Q= 1 Work       8
+    0.000 ID=5 Q= 0 Recieve    8
+    0.009 ID=4      Complete   8
+    0.009 ID=4      Ask
     0.009 ID=7      Complete   8
     0.009 ID=7      Ask
-    0.010 ID=6      Complete   8
-    0.010 ID=6      Ask
-    0.010 ID=5      Complete   8
-    0.010 ID=5      Ask
-    0.010 ID=3      Complete   8
-    0.010 ID=3      Ask
-    0.010 ID=0 Q= 0 Work       8
-    0.010 ID=0 Q= 1 Work       8
-    0.010 ID=8 Q= 0 Recieve    8
-    0.010 ID=7 Q= 0 Recieve    8
-    0.010 ID=0 Q= 0 Work       8
-    0.010 ID=0 Q= 1 Work       8
-    0.010 ID=0 Q= 2 Work       8
-    0.010 ID=0 Q= 3 Work       8
-    0.010 ID=0 Q= 4 Work       8
-    0.010 ID=0 Q= 5 Work       8
-    0.010 ID=0 Q= 6 Work       8
-    0.010 ID=0 Q= 7 Work       8
-    0.010 ID=0 Q= 8 Work       8
-    0.010 ID=0 Q= 9 Work       8
-    0.010 ID=0 Q= 10 Work       8
-    0.010 ID=0 Q= 11 Work       8
-    0.010 ID=0 Q= 12 Work       8
-    0.010 ID=0 Q= 13 Work       8
-    0.010 ID=0 Q= 14 Work       8
-    0.010 ID=0 Q= 15 Work       8
-    0.010 ID=0 Q= 16 Work       8
-    0.010 ID=0 Q= 17 Work       8
-    0.010 ID=0 Q= 18 Work       8
-    0.010 ID=6 Q= 17 Recieve    8
-    0.013 ID=9      Complete   8
-    0.013 ID=9      Ask
-    0.013 ID=9 Q= 16 Recieve    8
-    0.015 ID=4      Complete   8
-    0.015 ID=4      Ask
-    0.015 ID=4 Q= 15 Recieve    8
-    0.018 ID=2      Complete   8
-    0.018 ID=2      Ask
-    0.018 ID=2 Q= 13 Recieve    8
-    0.018 ID=3 Q= 13 Recieve    8
-    0.018 ID=7      Complete   8
-    0.018 ID=7      Ask
-    0.018 ID=7 Q= 12 Recieve    8
-    0.019 ID=6      Complete   8
-    0.019 ID=6      Ask
-    0.019 ID=6 Q= 11 Recieve    8
-    0.019 ID=8      Complete   8
-    0.019 ID=8      Ask
-    0.019 ID=8 Q= 10 Recieve    8
-    0.021 ID=9      Complete   8
-    0.021 ID=9      Ask
-    0.021 ID=9 Q= 9 Recieve    8
-    0.021 ID=0 Q= 9 Work       8
-    0.021 ID=0 Q= 10 Work       8
-    0.021 ID=0 Q= 11 Work       8
-    0.021 ID=0 Q= 12 Work       8
-    0.021 ID=0 Q= 13 Work       8
-    0.021 ID=0 Q= 14 Work       8
-    0.021 ID=0 Q= 15 Work       8
-    0.021 ID=0 Q= 16 Work       8
-    0.021 ID=0 Q= 17 Work       8
-    0.021 ID=0 Q= 18 Work       8
-    0.023 ID=4      Complete   8
-    0.023 ID=4      Ask
-    0.023 ID=4 Q= 17 Recieve    8
-    0.023 ID=0 Q= 18 Work       8
-    0.024 ID=2      Complete   8
-    0.024 ID=2      Ask
-    0.024 ID=2 Q= 17 Recieve    8
-    0.024 ID=0 Q= 18 Work       8
-    0.024 ID=5 Q= 18 Recieve    8
-    0.024 ID=1      Complete   8
-    0.024 ID=1      Ask
-    0.024 ID=1 Q= 17 Recieve    8
-    0.027 ID=6      Complete   8
-    0.027 ID=6      Ask
-    0.027 ID=6 Q= 16 Recieve    8
-    0.027 ID=8      Complete   8
-    0.027 ID=8      Ask
-    0.027 ID=8 Q= 15 Recieve    8
-    0.027 ID=7      Complete   8
-    0.027 ID=7      Ask
-    0.027 ID=7 Q= 14 Recieve    8
-    0.029 ID=9      Complete   8
-    0.029 ID=9      Ask
-    0.029 ID=9 Q= 13 Recieve    8
-    0.031 ID=4      Complete   8
-    0.031 ID=4      Ask
-    0.031 ID=4 Q= 12 Recieve    8
-    0.032 ID=2      Complete   8
-    0.032 ID=2      Ask
-    0.032 ID=2 Q= 11 Recieve    8
-    0.033 ID=5      Complete   8
-    0.033 ID=5      Ask
-    0.034 ID=5 Q= 10 Recieve    8
-    0.035 ID=6      Complete   8
-    0.035 ID=6      Ask
-    0.035 ID=6 Q= 9 Recieve    8
-    0.035 ID=7      Complete   8
-    0.035 ID=7      Ask
-    0.035 ID=7 Q= 8 Recieve    8
-    0.035 ID=8      Complete   8
-    0.035 ID=8      Ask
-    0.035 ID=8 Q= 7 Recieve    8
-    0.035 ID=1      Complete   8
-    0.035 ID=1      Ask
-    0.035 ID=1 Q= 6 Recieve    8
-    0.037 ID=9      Complete   8
-    0.037 ID=9      Ask
-    0.037 ID=9 Q= 5 Recieve    8
-    0.040 ID=4      Complete   8
-    0.040 ID=4      Ask
-    0.040 ID=4 Q= 4 Recieve    8
-    0.041 ID=2      Complete   8
-    0.041 ID=2      Ask
-    0.041 ID=2 Q= 3 Recieve    8
-    0.041 ID=0 Q= 4 Work       8
-    0.041 ID=0 Q= 5 Work       8
-    0.041 ID=0 Q= 6 Work       8
-    0.041 ID=0 Q= 7 Work       8
-    0.041 ID=0 Q= 8 Work       8
-    0.041 ID=0 Q= 9 Work       8
-    0.041 ID=0 Q= 10 Work       8
-    0.041 ID=0 Q= 11 Work       8
-    0.041 ID=0 Q= 12 Work       8
-    0.041 ID=0 Q= 13 Work       8
-    0.041 ID=0 Q= 14 Work       8
-    0.041 ID=0 Q= 15 Work       8
-    0.041 ID=0 Q= 16 Work       8
-    0.041 ID=0 Q= 17 Work       8
-    0.041 ID=0 Q= 18 Work       8
-    0.043 ID=5      Complete   8
-    0.043 ID=5      Ask
-    0.043 ID=5 Q= 17 Recieve    8
-    0.043 ID=0 Q= 18 Work       8
-    0.043 ID=6      Complete   8
-    0.043 ID=0 Q= 19 Work       8
-    0.043 ID=6      Ask
-    0.043 ID=6 Q= 18 Recieve    8
-    0.044 ID=7      Complete   8
-    0.044 ID=7      Ask
-    0.044 ID=7 Q= 17 Recieve    8
-    0.044 ID=0 Q= 18 Work       8
-    0.044 ID=8      Complete   8
-    0.044 ID=8      Ask
-    0.044 ID=8 Q= 17 Recieve    8
-    0.044 ID=0 Q= 18 Work       8
-    0.045 ID=1      Complete   8
-    0.045 ID=1      Ask
-    0.045 ID=1 Q= 17 Recieve    8
-    0.045 ID=0 Q= 18 Work       8
-    0.046 ID=9      Complete   8
-    0.046 ID=9      Ask
-    0.046 ID=9 Q= 17 Recieve    8
-    0.046 ID=0 Q= 18 Work       8
-    0.048 ID=4      Complete   8
-    0.048 ID=4      Ask
-    0.048 ID=4 Q= 17 Recieve    8
-    0.048 ID=0 Q= 18 Work       8
-    0.049 ID=2      Complete   8
-    0.049 ID=2      Ask
-    0.049 ID=2 Q= 17 Recieve    8
-    0.049 ID=0 Q= 18 Work       8
-    0.049 ID=3      Complete   8
-    0.049 ID=3      Ask
-    0.049 ID=3 Q= 17 Recieve    8
-    0.049 ID=0 Q= 18 Work       8
-    0.052 ID=8      Complete   8
-    0.052 ID=8      Ask
-    0.052 ID=8 Q= 17 Recieve    8
-    0.052 ID=0 Q= 18 Work       8
-    0.052 ID=6      Complete   8
-    0.052 ID=0 Q= 19 Work       8
-    0.052 ID=6      Ask
-    0.052 ID=6 Q= 18 Recieve    8
-    0.052 ID=7      Complete   8
-    0.052 ID=7      Ask
-    0.052 ID=7 Q= 17 Recieve    8
-    0.052 ID=0 Q= 18 Work       8
-    0.053 ID=1      Complete   8
-    0.053 ID=1      Ask
-    0.053 ID=1 Q= 17 Recieve    8
-    0.053 ID=0 Q= 18 Work       8
-    0.054 ID=9      Complete   8
-    0.054 ID=9      Ask
-    0.054 ID=9 Q= 17 Recieve    8
-    0.054 ID=0 Q= 18 Work       8
-    0.056 ID=4      Complete   8
-    0.056 ID=4      Ask
-    0.056 ID=4 Q= 17 Recieve    8
-    0.056 ID=0 Q= 18 Work       8
-    0.057 ID=2      Complete   8
-    0.057 ID=2      Ask
-    0.057 ID=2 Q= 17 Recieve    8
-    0.057 ID=0 Q= 18 Work       8
-    0.057 ID=3      Complete   8
-    0.057 ID=3      Ask
-    0.057 ID=3 Q= 17 Recieve    8
-    0.057 ID=0 Q= 18 Work       8
-    0.060 ID=8      Complete   8
-    0.060 ID=8      Ask
-    0.060 ID=8 Q= 17 Recieve    8
-    0.060 ID=0 Q= 18 Work       8
-    0.060 ID=6      Complete   8
-    0.060 ID=0 Q= 19 Work       8
-    0.060 ID=6      Ask
-    0.060 ID=6 Q= 18 Recieve    8
-    0.061 ID=7      Complete   8
-    0.061 ID=7      Ask
-    0.061 ID=7 Q= 17 Recieve    8
-    0.061 ID=0 Q= 18 Work       8
-    0.062 ID=1      Complete   8
-    0.062 ID=1      Ask
-    0.062 ID=1 Q= 17 Recieve    8
-    0.062 ID=0 Q= 18 Work       8
-    0.062 ID=9      Complete   8
-    0.062 ID=9      Ask
-    0.062 ID=9 Q= 17 Recieve    8
-    0.062 ID=0 Q= 18 Work       8
-    0.065 ID=4      Complete   8
-    0.065 ID=4      Ask
-    0.065 ID=4 Q= 17 Recieve    8
-    0.065 ID=0 Q= 18 Work       8
-    0.065 ID=2      Complete   8
-    0.065 ID=2      Ask
-    0.066 ID=2 Q= 18 Recieve    8
-    0.066 ID=0 Q= 18 Work       8
-    0.066 ID=3      Complete   8
-    0.066 ID=3      Ask
-    0.066 ID=3 Q= 17 Recieve    8
-    0.066 ID=0 Q= 18 Work       8
-    0.069 ID=8      Complete   8
-    0.069 ID=8      Ask
-    0.069 ID=8 Q= 17 Recieve    8
-    0.069 ID=0 Q= 18 Work       8
-    0.069 ID=6      Complete   8
-    0.069 ID=0 Q= 19 Work       8
-    0.069 ID=6      Ask
-    0.069 ID=6 Q= 18 Recieve    8
-    0.069 ID=7      Complete   8
-    0.069 ID=7      Ask
-    0.069 ID=7 Q= 17 Recieve    8
-    0.069 ID=0 Q= 18 Work       8
-    0.070 ID=1      Complete   8
-    0.070 ID=1      Ask
-    0.070 ID=1 Q= 17 Recieve    8
-    0.070 ID=0 Q= 18 Work       8
-    0.071 ID=9      Complete   8
-    0.071 ID=9      Ask
-    0.071 ID=9 Q= 17 Recieve    8
-    0.071 ID=0 Q= 18 Work       8
-    0.073 ID=4      Complete   8
-    0.073 ID=4      Ask
-    0.073 ID=4 Q= 17 Recieve    8
-    0.073 ID=0 Q= 18 Work       8
-    0.074 ID=2      Complete   8
-    0.074 ID=2      Ask
-    0.074 ID=2 Q= 17 Recieve    8
-    0.074 ID=0 Q= 18 Work       8
-    0.074 ID=3      Complete   8
-    0.074 ID=3      Ask
-    0.074 ID=3 Q= 17 Recieve    8
-    0.074 ID=0 Q= 18 Work       8
-    0.075 ID=5      Complete   8
-    0.075 ID=5      Ask
-    0.075 ID=5 Q= 17 Recieve    8
-    0.075 ID=0 Q= 18 Work       8
-    0.077 ID=8      Complete   8
-    0.077 ID=8      Ask
-    0.077 ID=8 Q= 17 Recieve    8
-    0.077 ID=0 Q= 18 Work       8
-    0.077 ID=6      Complete   8
-    0.077 ID=0 Q= 19 Work       8
-    0.077 ID=6      Ask
-    0.077 ID=6 Q= 18 Recieve    8
-    0.078 ID=1      Complete   8
-    0.078 ID=1      Ask
-    0.078 ID=1 Q= 17 Recieve    8
-    0.078 ID=0 Q= 18 Work       8
-    0.079 ID=9      Complete   8
-    0.079 ID=9      Ask
-    0.079 ID=9 Q= 17 Recieve    8
-    0.079 ID=0 Q= 18 Work       8
-    0.082 ID=4      Complete   8
-    0.082 ID=0 Q= 19 Work       8
-    0.082 ID=4      Ask
-    0.082 ID=4 Q= 18 Recieve    8
-    0.082 ID=2      Complete   8
-    0.082 ID=2      Ask
-    0.082 ID=2 Q= 17 Recieve    8
-    0.082 ID=0 Q= 18 Work       8
-    0.082 ID=3      Complete   8
-    0.082 ID=3      Ask
-    0.082 ID=3 Q= 17 Recieve    8
-    0.082 ID=0 Q= 18 Work       8
-    0.083 ID=5      Complete   8
-    0.083 ID=5      Ask
-    0.083 ID=5 Q= 17 Recieve    8
-    0.083 ID=0 Q= 18 Work       8
-    0.085 ID=8      Complete   8
-    0.085 ID=8      Ask
-    0.085 ID=8 Q= 17 Recieve    8
-    0.085 ID=0 Q= 18 Work       8
-    0.085 ID=6      Complete   8
-    0.085 ID=6      Ask
-    0.085 ID=6 Q= 17 Recieve    8
-    0.085 ID=0 Q= 18 Work       8
-    0.087 ID=1      Complete   8
-    0.087 ID=1      Ask
-    0.087 ID=1 Q= 17 Recieve    8
-    0.087 ID=0 Q= 18 Work       8
-    0.087 ID=9      Complete   8
-    0.087 ID=9      Ask
-    0.087 ID=9 Q= 17 Recieve    8
-    0.087 ID=0 Q= 18 Work       8
-    0.090 ID=4      Complete   8
-    0.090 ID=0 Q= 19 Work       8
-    0.090 ID=4      Ask
-    0.090 ID=4 Q= 18 Recieve    8
-    0.090 ID=2      Complete   8
-    0.090 ID=2      Ask
-    0.090 ID=2 Q= 17 Recieve    8
-    0.090 ID=0 Q= 18 Work       8
-    0.091 ID=3      Complete   8
-    0.091 ID=3      Ask
-    0.091 ID=3 Q= 17 Recieve    8
-    0.091 ID=0 Q= 18 Work       8
-    0.091 ID=5      Complete   8
-    0.091 ID=5      Ask
-    0.091 ID=5 Q= 17 Recieve    8
-    0.091 ID=0 Q= 18 Work       8
-    0.094 ID=8      Complete   8
-    0.094 ID=8      Ask
-    0.094 ID=8 Q= 17 Recieve    8
-    0.094 ID=0 Q= 18 Work       8
-    0.096 ID=9      Complete   8
-    0.096 ID=9      Ask
-    0.096 ID=9 Q= 17 Recieve    8
-    0.096 ID=0 Q= 18 Work       8
-    0.096 ID=1      Complete   8
-    0.096 ID=1      Ask
-    0.096 ID=1 Q= 17 Recieve    8
-    0.096 ID=0 Q= 18 Work       8
-    0.097 ID=7      Complete   8
-    0.097 ID=7      Ask
-    0.097 ID=7 Q= 17 Recieve    8
-    0.097 ID=0 Q= 18 Work       8
-    0.097 ID=0      End        
-    0.099 ID=2      Complete   8
-    0.099 ID=2      Ask
-    0.099 ID=2 Q= 17 Recieve    8
-    0.099 ID=3      Complete   8
-    0.099 ID=3      Ask
-    0.099 ID=3 Q= 16 Recieve    8
-    0.100 ID=5      Complete   8
-    0.100 ID=5      Ask
-    0.100 ID=5 Q= 15 Recieve    8
-    0.102 ID=8      Complete   8
-    0.102 ID=8      Ask
-    0.102 ID=8 Q= 14 Recieve    8
-    0.103 ID=9      Complete   8
-    0.103 ID=9      Ask
-    0.103 ID=9 Q= 13 Recieve    8
-    0.104 ID=1      Complete   8
-    0.104 ID=1      Ask
-    0.104 ID=1 Q= 12 Recieve    8
-    0.106 ID=7      Complete   8
-    0.106 ID=7      Ask
-    0.106 ID=7 Q= 11 Recieve    8
-    0.107 ID=2      Complete   8
-    0.107 ID=2      Ask
-    0.107 ID=2 Q= 10 Recieve    8
-    0.107 ID=3      Complete   8
-    0.107 ID=3      Ask
-    0.107 ID=3 Q= 9 Recieve    8
-    0.109 ID=5      Complete   8
-    0.109 ID=5      Ask
-    0.109 ID=5 Q= 8 Recieve    8
-    0.110 ID=8      Complete   8
-    0.110 ID=8      Ask
-    0.110 ID=8 Q= 7 Recieve    8
-    0.111 ID=9      Complete   8
-    0.111 ID=9      Ask
-    0.111 ID=9 Q= 6 Recieve    8
-    0.112 ID=4      Complete   8
-    0.112 ID=4      Ask
-    0.112 ID=4 Q= 5 Recieve    8
-    0.112 ID=1      Complete   8
-    0.112 ID=1      Ask
-    0.112 ID=1 Q= 4 Recieve    8
-    0.114 ID=6      Complete   8
-    0.114 ID=6      Ask
-    0.114 ID=6 Q= 3 Recieve    8
-    0.115 ID=2      Complete   8
-    0.115 ID=2      Ask
-    0.115 ID=2 Q= 2 Recieve    8
-    0.115 ID=3      Complete   8
-    0.115 ID=3      Ask
-    0.115 ID=3 Q= 1 Recieve    8
-    0.118 ID=5      Complete   8
-    0.118 ID=5      Ask
-    0.118 ID=5 Q= 0 Recieve    8
-    0.118 ID=8      Complete   8
-    0.118 ID=8      Ask
-    0.119 ID=9      Complete   8
-    0.119 ID=9      Ask
-    0.120 ID=1      Complete   8
-    0.120 ID=1      Ask
-    0.121 ID=6      Complete   8
-    0.121 ID=6      Ask
-    0.121 ID=4      Complete   8
-    0.121 ID=4      Ask
-    0.121 ID=7      Complete   8
-    0.121 ID=7      Ask
-    0.123 ID=2      Complete   8
-    0.123 ID=2      Ask
-    0.124 ID=3      Complete   8
-    0.124 ID=3      Ask
-    0.125 ID=5      Complete   8
-    0.125 ID=5      Ask
-Summary:
-     Work       112  
-     Ask        121  
-     Recieve    112  
-     Complete   112  
-     Sleep      0    
-     Thread 1   13   
-     Thread 2   15   
-     Thread 3   11   
-     Thread 4   12   
-     Thread 5   10   
-     Thread 6   12   
-     Thread 7   11   
-     Thread 8   14   
-     Thread 9   14   
-Transactions per second: 893.34
+    0.009 ID=0 Q= 1 Work       8
+    0.009 ID=0 Q= 2 Work       8
+    0.009 ID=2      Complete   8
+    0.009 ID=0 Q= 2 Work       8
+    0.009 ID=9 Q= 1 Recieve    8
+    0.009 ID=6      Complete   8
+    0.009 ID=6      Ask
+    0.009 ID=2      Ask
+    0.009 ID=0 Q= 1 Work       8
+    0.009 ID=3      Complete   8
+    0.009 ID=8 Q= 0 Recieve    8
+    0.009 ID=11 Q= 0 Recieve    8
+    0.009 ID=0 Q= 1 Work       8
+    0.009 ID=10      Complete   8
+    0.009 ID=6 Q= 0 Recieve    8
+    0.009 ID=10      Ask
+    0.009 ID=12 Q= 1 Recieve    8
+    0.009 ID=10 Q= 0 Recieve    8
+    0.009 ID=0 Q= 0 Work       8
+    0.009 ID=0 Q= 1 Work       8
+    0.009 ID=0 Q= 2 Work       8
+    0.009 ID=17 Q= 1 Recieve    8
+    0.009 ID=15 Q= 0 Recieve    8
+    0.017 ID=6      Complete   8
+    0.017 ID=6      Ask
+    0.017 ID=9      Complete   8
+    0.017 ID=9      Ask
+    0.017 ID=8      Complete   8
+    0.017 ID=8      Ask
+    0.017 ID=1      Complete   8
+    0.017 ID=3      Ask
+    0.017 ID=1      Ask
+    0.017 ID=12      Complete   8
+    0.017 ID=14      Ask
+    0.017 ID=12      Ask
+    0.017 ID=10      Complete   8
+    0.017 ID=10      Ask
+    0.017 ID=11      Complete   8
+    0.017 ID=11      Ask
+    0.017 ID=13      Ask
+    0.017 ID=17      Complete   8
+    0.017 ID=17      Ask
+    0.018 ID=5      Complete   8
+    0.018 ID=5      Ask
+    0.018 ID=0 Q= 1 Work       8
+    0.018 ID=0 Q= 2 Work       8
+    0.018 ID=19 Q= 1 Recieve    8
+    0.018 ID=0 Q= 2 Work       8
+    0.018 ID=0 Q= 3 Work       8
+    0.018 ID=16 Q= 2 Recieve    8
+    0.018 ID=20 Q= 1 Recieve    8
+    0.018 ID=0 Q= 1 Work       8
+    0.018 ID=0 Q= 2 Work       8
+    0.018 ID=0 Q= 3 Work       8
+    0.018 ID=0 Q= 4 Work       8
+    0.018 ID=0 Q= 5 Work       8
+    0.018 ID=0 Q= 6 Work       8
+    0.018 ID=4 Q= 5 Recieve    8
+    0.018 ID=18 Q= 5 Recieve    8
+    0.018 ID=0 Q= 6 Work       8
+    0.018 ID=0 Q= 7 Work       8
+    0.018 ID=0 Q= 8 Work       8
+    0.018 ID=0 Q= 9 Work       8
+    0.018 ID=3 Q= 9 Recieve    8
+    0.018 ID=14 Q= 8 Recieve    8
+    0.018 ID=0 Q= 8 Work       8
+    0.018 ID=0 Q= 9 Work       8
+    0.018 ID=0 Q= 10 Work       8
+    0.018 ID=11 Q= 10 Recieve    8
+    0.018 ID=0 Q= 10 Work       8
+    0.018 ID=0 Q= 11 Work       8
+    0.018 ID=0 Q= 12 Work       8
+    0.018 ID=0 Q= 13 Work       8
+    0.018 ID=0 Q= 14 Work       8
+    0.018 ID=0 Q= 15 Work       8
+    0.018 ID=0 Q= 16 Work       8
+    0.018 ID=0 Q= 17 Work       8
+    0.018 ID=0 Q= 18 Work       8
+    0.018 ID=0 Q= 19 Work       8
+    0.018 ID=0 Q= 20 Work       8
+    0.018 ID=0 Q= 21 Work       8
+    0.018 ID=0 Q= 22 Work       8
+    0.018 ID=0 Q= 23 Work       8
+    0.018 ID=0 Q= 24 Work       8
+    0.018 ID=0 Q= 25 Work       8
+    0.018 ID=0 Q= 26 Work       8
+    0.018 ID=0 Q= 27 Work       8
+    0.018 ID=0 Q= 28 Work       8
+    0.018 ID=0 Q= 29 Work       8
+    0.018 ID=0 Q= 30 Work       8
+    0.018 ID=0 Q= 31 Work       8
+    0.018 ID=0 Q= 32 Work       8
+    0.018 ID=
