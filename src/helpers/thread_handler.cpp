@@ -264,7 +264,7 @@ void file_write(string command, char n, int id) {
 	} else if (command == "Sleep" || command == "Complete") {
 		
 		fprintf(fp, "    %-5.3f ID=%d      %-10s %c\n",
-				time_now(), (int)work.size(), command.c_str(), n);
+				time_now(), id, command.c_str(), n);
 		
 		if (command == "Sleep") stats.sleep++;
 		else stats.complete++;
@@ -344,5 +344,5 @@ void write_footer() {
 		fprintf(fp, "     %-10s %-5d\n", thread_name.c_str(), stats.threads[i].second);
 	}
 
-	fprintf(fp, "Transactions per second: %.2f", (double)stats.work/time_now());
+	fprintf(fp, "Transactions per second: %.2f\n", (double)stats.work/time_now());
 }
